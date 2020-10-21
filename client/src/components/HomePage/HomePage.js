@@ -10,6 +10,8 @@ import {
 	Card,
 	Divider,
 	Typography,
+	FormControlLabel,
+	Checkbox,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -115,6 +117,17 @@ function HomePage({ value: initialValue }) {
 							src={`${D_DRAGON_URL}/img/profileicon/${summoner.profileIconId}.png`}
 						/>
 					</Box>
+					<FormControlLabel
+        control={
+          <Checkbox
+            // checked={state.checkedB}
+            // onChange={handleChange}
+            name="checkedB"
+            color="primary"
+          />
+        }
+        label="Chest already granted"
+      />
 					<ChampionList champions={summoner.champions} />
 				</>
 			)}
